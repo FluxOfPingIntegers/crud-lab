@@ -9,15 +9,15 @@ class ReviewsContainer extends Component {
     return (
       <div>
         <ReviewInput addReview={this.props.addReview} restaurantId={this.props.restaurant.id}/>
-        <Reviews reviews={this.props.reviews} deleteReview={this.props.deleteReview} restaurantId={this.props.restaurntId}/>
+        <Reviews reviews={this.props.reviews} deleteReview={this.props.deleteReview} restaurantId={this.props.restaurant.id}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({reviews}) => {
+const mapStateToProps = ( {reviews} ) => {
   return {
-    reviews
+    reviews: reviews
   }
 }
 
